@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { makeStyles } from "@material-ui/core";
 
 function App() {
+  //configuración inicial para dar estilos/ copy page in components
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <h1>Hola Relikedd'</h1>
     </div>
   );
 }
+
+//configuración para uso de hook
+//obtenemos theme (objeto con clases)
+const useStyles = makeStyles((theme) => ({
+  //aquí creamos las clases
+  root: {},
+}));
 
 export default App;

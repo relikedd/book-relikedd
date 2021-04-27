@@ -25,7 +25,7 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   //aquí creamos las clases
   root: {
-
+    
   },
 }));
 

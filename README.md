@@ -1,7 +1,7 @@
 Se comienza por instalar 
 npm install @material-ui/icons
 npm install @material-ui/core
-
+npm install react-scroll
 
 # Getting Started with Create React App
 

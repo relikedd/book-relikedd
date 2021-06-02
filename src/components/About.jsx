@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Card, CardContent, CardMedia, makeStyles, Typography, CardActions } from "@material-ui/core";
-import CvPhoto from '../images/Cv-ehh.png'
+import CvPhoto from '../assets/img/Cv-ehh.png'
 import TypeWriterEffect from 'react-typewriter-effect'
-import CvPdf from '../images/CV_Eduardo_Hernández.pdf'
+import CvPdf from '../assets/doc/CV_Eduardo_Hernández.pdf'
 
 const About = ({ title, id, dark }) => {
     const classes = useStyles();
@@ -18,7 +18,8 @@ const About = ({ title, id, dark }) => {
                             textStyle={{
                                 fontSize: "2rem",
                                 fontWeight: "700px",
-                                color: "tomato"
+                                color: "tomato",
+                                with: "16rem",
                             }}
                             startDelay={100}
                             cursorColor="black"
@@ -81,31 +82,40 @@ const useStyles = makeStyles((theme) => ({
     },
     cardcontent: {
         marginTop: theme.spacing(2),
-        "& h6":{
-            marginTop:theme.spacing(6),
+        "& h6": {
+            marginTop: theme.spacing(6),
+            [theme.breakpoints.down("sm")]: {
+                display: "none",
+                // right: "3rem",
+            },
         },
     },
     pdfbutton: {
         position: "absolute",
-        bottom: "8%",
-        right: "14%",
+        bottom: "5rem",
+        right: "10rem",
+        // bottom: "8%",
+        // right: "14%",
         [theme.breakpoints.down("sm")]: {
-            bottom: "1rem",
-            right: "3rem",
+            // bottom: "1rem",
+            right: "6rem",
         },
         backgroundColor: "tomato",
         padding: theme.spacing(3),
-        "& hover": {
+        "&:hover": {
             backgroundColor: "#fff",
+            "& a": {
+                color: "tomato",
+            },
         },
         "& a": {
             color: "#fff",
             textDecoration: "none",
             fontWeight: 700,
         },
-        "& a:hover": {
-            color: "tomato",
-        }
+        // "& a:hover": {
+        //     color: "tomato",
+        // }
     }
 }));
 

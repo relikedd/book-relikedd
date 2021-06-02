@@ -1,7 +1,7 @@
 import { AppBar, Divider, Drawer, List, ListItem, ListItemIcon, Toolbar } from '@material-ui/core'
 import { makeStyles, IconButton } from '@material-ui/core'
 import React, { useState } from 'react'
-import logo from "../images/Logo-relikedd.png"
+import Logo from "../assets/img/Logo-relikedd.png"
 import { Link, animateScroll as scroll } from 'react-scroll'
 import InfoTwoToneIcon from '@material-ui/icons/InfoTwoTone'
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
@@ -40,7 +40,7 @@ const Navbar = () => {
         <>
             <AppBar position="sticky" className={classes.root}>
                 <Toolbar className={classes.toolbar}>
-                    <img src={logo} className={classes.logo} alt="Logo" />
+                    <img src={Logo} className={classes.logo} alt="Logo" />
                     <List className={classes.menu}>
                         {
                             links.map(({ id, text }, index) => (
